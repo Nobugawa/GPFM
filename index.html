@@ -59,23 +59,25 @@
     .mini{font-size:.82rem;color:#cdd8eb}
     header{
       position:absolute;z-index:10;top:0;left:0;right:0;
-      padding:18px 0;
+      padding:14px 0 34px;
+      background:linear-gradient(180deg, rgba(255,255,255,.96) 0%, rgba(255,255,255,.86) 46%, rgba(255,255,255,0) 100%);
+      backdrop-filter:blur(6px);
     }
     .nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
     .brand{
-      width:390px;max-width:42vw;padding:7px 12px;border-radius:10px;
-      background:rgba(255,255,255,.97);box-shadow:0 8px 24px rgba(0,0,0,.13);
+      width:430px;max-width:46vw;padding:0;border-radius:0;
+      background:transparent;box-shadow:none;
     }
-    .brand img{width:100%;height:54px;object-fit:contain}
-    .nav-actions{display:flex;align-items:center;gap:18px;color:white}
-    .phone{font-weight:800;white-space:nowrap}
+    .brand img{width:100%;height:76px;object-fit:contain;object-position:left center;display:block}
+    .nav-actions{display:flex;align-items:center;gap:18px;color:var(--navy)}
+    .phone{font-weight:800;white-space:nowrap;color:var(--navy)}
     .hero{
       position:relative;min-height:790px;overflow:hidden;
       background:
         radial-gradient(circle at 78% 18%,rgba(104,183,255,.26),transparent 31%),
         radial-gradient(circle at 80% 84%,rgba(199,148,44,.22),transparent 28%),
         linear-gradient(125deg,#06152f 0%,#0a2a59 58%,#0d3977 100%);
-      color:white;padding:150px 0 94px;
+      color:white;padding:176px 0 94px;
     }
     .hero::after{
       content:"";position:absolute;right:-160px;top:80px;width:620px;height:620px;
@@ -215,9 +217,9 @@
     }
     @media (max-width:620px){
       .wrap{width:min(100% - 28px,1160px)}
-      .brand{width:220px;max-width:58vw}.brand img{height:42px}
+      .brand{width:260px;max-width:66vw}.brand img{height:52px}
       .nav-actions .btn{display:none}
-      .hero{min-height:auto;padding:118px 0 72px}
+      .hero{min-height:auto;padding:138px 0 72px}
       .hero-actions .btn{width:100%}
       .panel-grid,.pain-grid,.service-grid,.proof-grid,.included,.form-grid,.footer-grid{grid-template-columns:1fr}
       .full{grid-column:auto}
@@ -230,7 +232,7 @@
   </style>
 </head>
 <body>
-  <div class="version">GPFM 1.1</div>
+  <div class="version">GPFM 1.2</div>
 
   <header>
     <div class="wrap nav">
@@ -239,7 +241,7 @@
       </a>
       <div class="nav-actions">
         <a class="phone" href="tel:+19732213464">973-221-3464</a>
-        <a class="btn btn-primary" href="#audit">Request a Maintenance Audit</a>
+        <a class="btn btn-primary" href="#assessment">Request a Maintenance Assessment</a>
       </div>
     </div>
   </header>
@@ -252,7 +254,7 @@
           <h1>Stop chasing vendors.<span>Start protecting your property.</span></h1>
           <p>Great Precision Facilities Management gives property and business managers one accountable point of contact for routine repairs, preventive maintenance, inspections, and documentation.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#audit">Request Your Free Maintenance Audit →</a>
+            <a class="btn btn-primary" href="#assessment">Request Your Free Maintenance Assessment →</a>
             <a class="btn btn-ghost" href="tel:+19732213464">Call 973-221-3464</a>
           </div>
           <div class="trust-row">
@@ -361,7 +363,7 @@
             </div>
             <div class="risk"><strong>Low-risk start:</strong> Begin with a 30-day satisfaction period. No long-term contract is required.</div>
             <div class="custom-plan"><strong>Need a different number of monthly hours or support across multiple properties?</strong> Custom plans are available.</div>
-            <a class="btn btn-primary" href="#audit">Request Your Free Maintenance Audit</a>
+            <a class="btn btn-primary" href="#assessment">Request Your Free Maintenance Assessment</a>
           </div>
         </div>
       </div>
@@ -402,10 +404,10 @@
       </div>
     </section>
 
-    <section class="cta" id="audit">
+    <section class="cta" id="assessment">
       <div class="wrap cta-box">
         <div class="cta-copy">
-          <div class="eyebrow" style="color:#f3c35c">Free maintenance audit</div>
+          <div class="eyebrow" style="color:#f3c35c">Free maintenance assessment</div>
           <h2>Find the gaps before they become emergencies.</h2>
           <p>Tell us about your property and the maintenance problems consuming your time. We will review the fit and discuss a practical starting plan.</p>
           <div class="trust-row">
@@ -415,8 +417,8 @@
           </div>
         </div>
 
-        <form name="maintenance-audit" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="maintenance-audit">
+        <form name="maintenance-assessment" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="maintenance-assessment">
           <p hidden><label>Do not fill this out: <input name="bot-field"></label></p>
           <div class="form-grid">
             <div><label for="name">Full name</label><input id="name" name="name" autocomplete="name" required></div>
