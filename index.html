@@ -63,9 +63,10 @@
     }
     .nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
     .brand{
-      width:222px;padding:8px 12px;border-radius:10px;
-      background:rgba(255,255,255,.96);box-shadow:0 8px 24px rgba(0,0,0,.13);
+      width:390px;max-width:42vw;padding:7px 12px;border-radius:10px;
+      background:rgba(255,255,255,.97);box-shadow:0 8px 24px rgba(0,0,0,.13);
     }
+    .brand img{width:100%;height:54px;object-fit:contain}
     .nav-actions{display:flex;align-items:center;gap:18px;color:white}
     .phone{font-weight:800;white-space:nowrap}
     .hero{
@@ -93,7 +94,12 @@
       border-radius:26px;background:linear-gradient(155deg,rgba(255,255,255,.13),rgba(255,255,255,.055));
       backdrop-filter:blur(16px);box-shadow:0 30px 80px rgba(0,0,0,.26);
     }
-    .hero-logo{background:white;border-radius:18px;padding:18px}
+    .hero-photo{
+      overflow:hidden;border-radius:18px;background:white;
+      border:1px solid rgba(255,255,255,.22);
+      box-shadow:0 16px 42px rgba(0,0,0,.18)
+    }
+    .hero-photo img{width:100%;height:205px;object-fit:cover}
     .panel-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:16px}
     .panel-card{padding:17px;border-radius:14px;background:rgba(5,20,44,.58);border:1px solid rgba(255,255,255,.1)}
     .panel-card strong{display:block;font-size:1.1rem;color:white}
@@ -158,6 +164,8 @@
     .included{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:24px 0}
     .included div{display:flex;gap:9px;font-size:.88rem}
     .risk{padding:16px;border-radius:13px;background:#eefbf5;border:1px solid #c8efdc;font-size:.86rem;color:#236b4c}
+    .custom-plan{margin-top:12px;padding:15px;border-radius:13px;background:#f5f7fb;border:1px solid var(--line);font-size:.86rem;color:var(--muted)}
+    .custom-plan strong{color:var(--ink)}
     .price-card .btn{width:100%;margin-top:18px}
     .fit-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
     .fit-card{padding:22px 14px;text-align:center;background:white;border:1px solid var(--line);border-radius:16px;font-weight:700}
@@ -207,7 +215,7 @@
     }
     @media (max-width:620px){
       .wrap{width:min(100% - 28px,1160px)}
-      .brand{width:170px}
+      .brand{width:220px;max-width:58vw}.brand img{height:42px}
       .nav-actions .btn{display:none}
       .hero{min-height:auto;padding:118px 0 72px}
       .hero-actions .btn{width:100%}
@@ -222,12 +230,12 @@
   </style>
 </head>
 <body>
-  <div class="version">GPFM 1.0</div>
+  <div class="version">GPFM 1.1</div>
 
   <header>
     <div class="wrap nav">
       <a class="brand" href="#top" aria-label="Great Precision Facilities Management home">
-        <img src="assets/gpfm-logo.png" alt="Great Precision Facilities Management">
+        <img src="assets/gpfm-flat-logo.png" alt="Great Precision Facilities Management">
       </a>
       <div class="nav-actions">
         <a class="phone" href="tel:+19732213464">973-221-3464</a>
@@ -256,7 +264,7 @@
         </div>
 
         <div class="hero-panel">
-          <div class="hero-logo"><img src="assets/gpfm-logo.png" alt=""></div>
+          <div class="hero-photo"><img src="assets/commercial-property-hero.jpg" alt="Modern commercial retail and office property"></div>
           <div class="panel-grid">
             <div class="panel-card"><strong>One call</strong><span>One accountable maintenance partner</span></div>
             <div class="panel-card"><strong>48 hours</strong><span>Priority response target for members</span></div>
@@ -340,7 +348,7 @@
 
           <div class="price-card">
             <div class="price-top">
-              <div><div class="badge">PrecisionCare™ Core Plan</div><h3 style="margin-top:12px">One Simple Monthly Plan</h3></div>
+              <div><div class="badge">PrecisionCare™ Commercial Maintenance Plan</div><h3 style="margin-top:12px">One Simple Monthly Plan</h3></div>
               <div class="price">$2,000 <small>/ month</small></div>
             </div>
             <div class="included">
@@ -352,6 +360,7 @@
               <div><span class="check">✓</span> 30-day workmanship guarantee</div>
             </div>
             <div class="risk"><strong>Low-risk start:</strong> Begin with a 30-day satisfaction period. No long-term contract is required.</div>
+            <div class="custom-plan"><strong>Need a different number of monthly hours or support across multiple properties?</strong> Custom plans are available.</div>
             <a class="btn btn-primary" href="#audit">Request Your Free Maintenance Audit</a>
           </div>
         </div>
